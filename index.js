@@ -156,38 +156,18 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-
 // function filterByWord(arr, string){
+//     let newArr = [];
 //     for(i = 0; i < arr.length; i++){
-//         if(arr.includes(string)){
-//         return arr;    
+//         if(arr[i].includes(string)){
+//             newArr.push(arr[i]);
 //         }   
 //     }
+//     return newArr; 
 // }
-// let promoFlavors = [];
-// for(let i = 0; i < originalFlavors.length; i++){
-//     if(originalFlavors[i].includes('chocolate')){
-//      promoFlavors.unshift(originalFlavors[i]);  
-//     }
-    
-//   }
 
-//   console.log(promoFlavors);
+// console.log(filterByWord(originalFlavors, "Chocolate"));
 
-function filterByWord(arr, string){
-    let newArr = [];
-    for(i = 0; i < arr.length; i++){
-        if(arr[i].includes(string)){
-            newArr.push(arr[i]);
-        }
-           
-    }
-    return newArr; 
-}
-
-console.log(filterByWord(originalFlavors, "Chocolate"));
-
-// console.log(filterByWord(originalFlavors, 'chocolate'));
 
 
 
@@ -203,12 +183,18 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
 
-    /*code here*/
-
+function getAverageWordLength(arr){
+    // i = arr[0];
+    let string = arr[0];
+    let avg = ''
+    for(i = 0; i < arr.length; i++){
+        avg = (string.split(' ').length);
+    }return avg;
+    
 }
 
+console.log(getAverageWordLength(originalFlavors));
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
